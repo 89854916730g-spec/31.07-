@@ -9,267 +9,254 @@
     <style>
         body {
             font-family: 'Inter', system-ui, sans-serif;
-            background: linear-gradient(165deg, #0a2744 0%, #0c3d5c 50%, #0a4a6e 100%);
-            min-height: 100vh;
+            background: #f8fafc;
+            color: #1e293b;
         }
-        .card {
-            background: rgba(255, 255, 255, 0.97);
-            border: 1px solid rgba(255,255,255,0.15);
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
         }
-        .red-accent {
-            background: linear-gradient(90deg, #dc2626 0%, #b91c1c 100%);
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .section-line {
+            width: 40px;
+            height: 3px;
+            background: #dc2626;
+            border-radius: 2px;
         }
     </style>
 </head>
-<body class="text-zinc-800">
+<body>
 
 <!-- Hero -->
-<div class="max-w-3xl mx-auto px-6 pt-12 pb-10 text-center">
+<header class="bg-gradient-to-b from-slate-800 to-slate-900 text-white pt-14 pb-16 px-6 text-center">
+    <img src="logo.png" alt="Транспортные Технологии" class="h-16 md:h-20 mx-auto mb-10 object-contain">
     
-    <!-- Логотип -->
-    <div class="mb-8 flex justify-center">
-        <div class="bg-white rounded-2xl px-8 py-5 shadow-xl">
-            <img src="logo.png" alt="Транспортные Технологии" class="h-20 md:h-24 mx-auto object-contain">
-        </div>
-    </div>
-
-    <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight mb-4">
+    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight mb-5">
         ДЕНЬ<br>ЖЕЛЕЗНОДОРОЖНИКА
     </h1>
     
-    <div class="inline-block px-7 py-2 rounded-full bg-red-600 text-white text-lg font-bold">
+    <div class="inline-block px-6 py-2 rounded-full bg-red-600 text-white text-base font-semibold tracking-wide">
         31 июля
     </div>
-</div>
+</header>
 
-<div class="max-w-3xl mx-auto px-5 pb-16 space-y-5">
+<main class="max-w-2xl mx-auto px-5 py-12 space-y-14">
 
     <!-- Точка сбора -->
-    <div class="card rounded-3xl overflow-hidden shadow-xl">
-        <div class="red-accent px-6 py-4 flex items-center gap-3">
-            <span class="text-xl">📍</span>
-            <h2 class="text-white font-bold text-lg">Точка сбора (трансфер)</h2>
-        </div>
-        <div class="p-6 space-y-5">
-            <div class="grid grid-cols-3 gap-3 text-center">
-                <div class="bg-sky-50 rounded-2xl py-4 px-2">
-                    <div class="text-xs text-sky-600 font-semibold uppercase tracking-wider">Сбор</div>
-                    <div class="text-2xl font-bold text-sky-900 mt-1">8:40</div>
-                </div>
-                <div class="bg-sky-50 rounded-2xl py-4 px-2">
-                    <div class="text-xs text-sky-600 font-semibold uppercase tracking-wider">Посадка</div>
-                    <div class="text-2xl font-bold text-sky-900 mt-1">9:00</div>
-                </div>
-                <div class="bg-sky-50 rounded-2xl py-4 px-2">
-                    <div class="text-xs text-sky-600 font-semibold uppercase tracking-wider">Выезд</div>
-                    <div class="text-2xl font-bold text-sky-900 mt-1">9:20</div>
-                </div>
-            </div>
+    <section class="reveal">
+        <div class="section-line mb-4"></div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-6">Точка сбора (трансфер)</h2>
 
-            <div class="bg-zinc-50 rounded-2xl p-5 text-sm leading-relaxed space-y-2">
-                <p class="font-semibold text-zinc-900">м. Медведково, выход 1</p>
-                <p class="text-zinc-600">Вас встретит человек с табличкой <b>«Транспортные Технологии»</b>.</p>
+        <div class="flex gap-10 mb-8">
+            <div>
+                <div class="text-xs text-slate-400 uppercase tracking-widest mb-1">Сбор</div>
+                <div class="text-3xl font-bold text-slate-900">8:40</div>
             </div>
-
-            <a href="https://yandex.ru/maps?whatshere%5Bzoom%5D=19&whatshere%5Bpoint%5D=37.661616,55.887888&si=ymxuc28bfxzn2gz1xntxzzdtd0" target="_blank"
-               class="block w-full text-center py-3.5 rounded-2xl bg-sky-600 text-white font-semibold hover:bg-sky-700 transition">
-                Точка у метро →
-            </a>
+            <div>
+                <div class="text-xs text-slate-400 uppercase tracking-widest mb-1">Посадка</div>
+                <div class="text-3xl font-bold text-slate-900">9:00</div>
+            </div>
+            <div>
+                <div class="text-xs text-slate-400 uppercase tracking-widest mb-1">Выезд</div>
+                <div class="text-3xl font-bold text-slate-900">9:20</div>
+            </div>
         </div>
-    </div>
+
+        <p class="text-slate-800 font-medium mb-1">м. Медведково, выход 1</p>
+        <p class="text-slate-500 text-sm leading-relaxed mb-6">
+            Вас встретит человек с табличкой «Транспортные Технологии».
+        </p>
+
+        <a href="https://yandex.ru/maps?whatshere%5Bzoom%5D=19&whatshere%5Bpoint%5D=37.661616,55.887888&si=ymxuc28bfxzn2gz1xntxzzdtd0" 
+           target="_blank"
+           class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-xl hover:bg-slate-800 transition">
+            Точка у метро →
+        </a>
+    </section>
 
     <!-- Как добраться -->
-    <div class="card rounded-3xl overflow-hidden shadow-xl">
-        <div class="red-accent px-6 py-4 flex items-center gap-3">
-            <span class="text-xl">🚗</span>
-            <h2 class="text-white font-bold text-lg">Как добраться самостоятельно</h2>
+    <section class="reveal">
+        <div class="section-line mb-4"></div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-6">Как добраться самостоятельно</h2>
+
+        <p class="text-slate-900 font-medium mb-1">Курорт ПИРогово • Яхт-клуб</p>
+        <p class="text-slate-500 text-sm leading-relaxed mb-2">
+            141015, Московская область, городской округ Мытищи,<br>
+            территория Туристический пансионат Клязьминское водохранилище, строение 3А
+        </p>
+        <p class="text-red-600 text-sm font-medium mb-6">Ограничение скорости на территории — 20 км/ч</p>
+
+        <a href="schema1.jpg" target="_blank" class="block mb-8 rounded-xl overflow-hidden border border-slate-200">
+            <img src="schema1.jpg" alt="Схема проезда" class="w-full h-auto">
+        </a>
+
+        <div class="space-y-5 text-sm">
+            <div class="flex gap-4">
+                <div class="text-red-600 font-bold w-5 shrink-0">1</div>
+                <div>
+                    <p class="text-slate-800">Наберите в Яндекс.Картах «ЯХТ»</p>
+                    <p class="text-slate-400 text-xs mt-1">Координаты парковки: 55.990221, 37.674700</p>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <div class="text-red-600 font-bold w-5 shrink-0">2</div>
+                <div class="text-slate-800">Для проезда на территорию — следуйте через пост охраны</div>
+            </div>
+            <div class="flex gap-4">
+                <div class="text-red-600 font-bold w-5 shrink-0">3</div>
+                <div class="text-slate-800">Продолжайте движение на охраняемую парковку (220 метров)</div>
+            </div>
+            <div class="flex gap-4">
+                <div class="text-red-600 font-bold w-5 shrink-0">4</div>
+                <div>
+                    <p class="text-slate-800">Оставьте автомобиль на парковке и следуйте в яхт-клуб</p>
+                    <p class="text-slate-400 text-xs mt-1">На территории будут указатели «ЯХТ-КЛУБ»</p>
+                </div>
+            </div>
         </div>
-        <div class="p-6 space-y-5 text-sm">
-            <div class="bg-zinc-50 rounded-2xl p-5">
-                <p class="font-semibold text-zinc-900 mb-1">Курорт ПИРогово • Яхт-клуб</p>
-                <p class="text-zinc-600 leading-relaxed">
-                    141015, Московская область, городской округ Мытищи,<br>
-                    территория Туристический пансионат Клязьминское водохранилище, строение 3А
-                </p>
-                <p class="text-red-600 font-medium mt-3">Ограничение скорости на территории — 20 км/ч</p>
-            </div>
 
-            <div class="rounded-2xl overflow-hidden border border-zinc-200">
-                <img src="schema1.jpg" alt="Схема проезда" class="w-full h-auto">
-            </div>
-
-            <div class="space-y-4">
-                <div class="flex gap-4 items-start">
-                    <div class="w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold text-sm shrink-0">1</div>
-                    <div>
-                        <p>Наберите в Яндекс.Картах <b>«ЯХТ»</b></p>
-                        <p class="text-zinc-500 text-xs mt-0.5">Координаты парковки: 55.990221, 37.674700</p>
-                    </div>
-                </div>
-                <div class="flex gap-4 items-start">
-                    <div class="w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold text-sm shrink-0">2</div>
-                    <div>Для проезда на территорию — следуйте через пост охраны</div>
-                </div>
-                <div class="flex gap-4 items-start">
-                    <div class="w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold text-sm shrink-0">3</div>
-                    <div>Продолжайте движение на охраняемую парковку (220 метров)</div>
-                </div>
-                <div class="flex gap-4 items-start">
-                    <div class="w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold text-sm shrink-0">4</div>
-                    <div>
-                        Оставьте автомобиль на парковке и следуйте в яхт-клуб
-                        <p class="text-zinc-500 text-xs mt-0.5">На территории будут указатели «ЯХТ-КЛУБ»</p>
-                    </div>
-                </div>
-            </div>
-
-            <a href="https://yandex.ru/maps/1/moscow-and-moscow-oblast/?ll=37.673547%2C55.986707&mode=routes&rtext=~55.986617%2C37.673642&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D167026777465&z=17" 
-               target="_blank"
-               class="block w-full text-center py-4 rounded-2xl bg-sky-600 text-white font-semibold hover:bg-sky-700 transition">
-                Открыть маршрут в Яндекс.Картах →
-            </a>
-        </div>
-    </div>
+        <a href="https://yandex.ru/maps/1/moscow-and-moscow-oblast/?ll=37.673547%2C55.986707&mode=routes&rtext=~55.986617%2C37.673642&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D167026777465&z=17" 
+           target="_blank"
+           class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-xl hover:bg-slate-800 transition mt-8">
+            Открыть маршрут в Яндекс.Картах →
+        </a>
+    </section>
 
     <!-- Гольф -->
-    <div class="card rounded-3xl overflow-hidden shadow-xl">
-        <div class="red-accent px-6 py-4 flex items-center gap-3">
-            <span class="text-xl">🏌️</span>
-            <h2 class="text-white font-bold text-lg">Как одеться на гольф</h2>
-        </div>
-        <div class="p-6 space-y-5 text-sm">
-            <div class="rounded-2xl overflow-hidden border border-zinc-200">
-                <img src="golf-odezhda.jpg" alt="Дресс-код гольф" class="w-full h-auto">
-            </div>
+    <section class="reveal">
+        <div class="section-line mb-4"></div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-6">Как одеться на гольф</h2>
 
-            <div class="grid md:grid-cols-2 gap-5">
-                <div>
-                    <p class="font-semibold text-emerald-700 mb-2">✓ Предпочтительная одежда</p>
-                    <ul class="space-y-1.5 text-zinc-700">
-                        <li>• Поло с воротником и пуговицами</li>
-                        <li>• Брюки или гольф-шорты</li>
-                        <li>• Кепка козырьком вперёд</li>
-                        <li>• Гольф-туфли или спортивная обувь</li>
-                    </ul>
-                </div>
-                <div>
-                    <p class="font-semibold text-red-600 mb-2">✕ Не допускается</p>
-                    <ul class="space-y-1.5 text-zinc-700">
-                        <li>• Футболки и открытые майки</li>
-                        <li>• Джинсы, лосины, велосипедки</li>
-                        <li>• Сандалии и открытая обувь</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+        <a href="golf-odezhda.jpg" target="_blank" class="block mb-8 rounded-xl overflow-hidden border border-slate-200">
+            <img src="golf-odezhda.jpg" alt="Дресс-код гольф" class="w-full h-auto">
+        </a>
 
-    <!-- Яхтинг -->
-    <div class="card rounded-3xl overflow-hidden shadow-xl">
-        <div class="red-accent px-6 py-4 flex items-center gap-3">
-            <span class="text-xl">⛵</span>
-            <h2 class="text-white font-bold text-lg">Как одеться на яхтинг</h2>
-        </div>
-        <div class="p-6 space-y-5 text-sm">
-            <p class="text-zinc-600">Специальная яхтенная одежда не требуется.</p>
-            
+        <div class="grid md:grid-cols-2 gap-8 text-sm">
             <div>
-                <p class="font-semibold text-emerald-700 mb-2">✓ Рекомендуем</p>
-                <ul class="space-y-1.5 text-zinc-700">
-                    <li>• Футболка / водолазка</li>
-                    <li>• Шорты / спортивные брюки</li>
-                    <li>• Ветровка или спортивная куртка</li>
-                    <li>• Бейсболка + солнцезащитные очки</li>
-                    <li>• Кроссовки / кеды на светлой подошве</li>
-                    <li>• Средство защиты от солнца</li>
+                <p class="text-emerald-600 font-semibold mb-3">✓ Предпочтительная одежда</p>
+                <ul class="space-y-2 text-slate-600">
+                    <li>Поло с воротником и пуговицами</li>
+                    <li>Брюки или гольф-шорты</li>
+                    <li>Кепка козырьком вперёд</li>
+                    <li>Гольф-туфли или спортивная обувь</li>
                 </ul>
             </div>
-
-            <div class="bg-red-50 border border-red-100 rounded-2xl p-5 text-red-800">
-                <p class="font-semibold mb-1">На воду запрещено брать:</p>
-                <p>часы, украшения, телефоны, стеклянную посуду, алкоголь.<br>
-                Ценные вещи можно оставить у менеджера яхт-клуба.</p>
+            <div>
+                <p class="text-red-600 font-semibold mb-3">✕ Не допускается</p>
+                <ul class="space-y-2 text-slate-600">
+                    <li>Футболки и открытые майки</li>
+                    <li>Джинсы, лосины, велосипедки</li>
+                    <li>Сандалии и открытая обувь</li>
+                </ul>
             </div>
-            <p class="text-zinc-500 text-xs">На месте можно сменить одежду в раздевалках.</p>
         </div>
-    </div>
+    </section>
+
+    <!-- Яхтинг -->
+    <section class="reveal">
+        <div class="section-line mb-4"></div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-6">Как одеться на яхтинг</h2>
+
+        <p class="text-slate-500 text-sm mb-6">Специальная яхтенная одежда не требуется.</p>
+
+        <p class="text-emerald-600 font-semibold mb-3 text-sm">✓ Рекомендуем</p>
+        <ul class="space-y-2 text-slate-600 text-sm mb-8">
+            <li>Футболка / водолазка</li>
+            <li>Шорты / спортивные брюки</li>
+            <li>Ветровка или спортивная куртка</li>
+            <li>Бейсболка + солнцезащитные очки</li>
+            <li>Кроссовки / кеды на светлой подошве</li>
+            <li>Средство защиты от солнца</li>
+        </ul>
+
+        <div class="bg-red-50 border border-red-100 rounded-xl p-5 text-sm">
+            <p class="text-red-600 font-semibold mb-2">На воду запрещено брать:</p>
+            <p class="text-slate-600">часы, украшения, телефоны, стеклянную посуду, алкоголь.<br>
+            Ценные вещи можно оставить у менеджера яхт-клуба.</p>
+        </div>
+        <p class="text-slate-400 text-xs mt-4">На месте можно сменить одежду в раздевалках.</p>
+    </section>
 
     <!-- Ведущие -->
-    <div class="card rounded-3xl overflow-hidden shadow-xl">
-        <div class="red-accent px-6 py-4 flex items-center gap-3">
-            <span class="text-xl">🎤</span>
-            <h2 class="text-white font-bold text-lg">Ведущие</h2>
-        </div>
-        <div class="p-6 text-center">
-            <p class="text-lg font-semibold text-zinc-800">Стас Зубков и Митя Горький</p>
-        </div>
-    </div>
+    <section class="reveal">
+        <div class="section-line mb-4"></div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Ведущие</h2>
+        <p class="text-lg text-slate-700 font-medium">Стас Зубков и Митя Горький</p>
+    </section>
 
     <!-- Тайминг -->
-    <div class="card rounded-3xl overflow-hidden shadow-xl">
-        <div class="red-accent px-6 py-4 flex items-center gap-3">
-            <span class="text-xl">☀️</span>
-            <h2 class="text-white font-bold text-lg">Дневная программа</h2>
-        </div>
-        <div class="p-6 space-y-4 text-sm">
-            <div class="flex gap-5 items-start">
-                <div class="font-bold text-sky-800 w-28 shrink-0">10:00</div>
-                <div>Welcome Breakfast</div>
+    <section class="reveal">
+        <div class="section-line mb-4"></div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-6">Дневная программа</h2>
+
+        <div class="space-y-5 text-sm mb-12">
+            <div class="flex gap-6">
+                <div class="text-slate-900 font-semibold w-28 shrink-0">10:00</div>
+                <div class="text-slate-600">Welcome Breakfast</div>
             </div>
-            <div class="flex gap-5 items-start">
-                <div class="font-bold text-sky-800 w-28 shrink-0">11:00–16:00</div>
-                <div>Регата • SUP • Гольф • ТехноФан • Мастер-классы • Настольный теннис • Гидроциклы</div>
+            <div class="flex gap-6">
+                <div class="text-slate-900 font-semibold w-28 shrink-0">11:00–16:00</div>
+                <div class="text-slate-600">Регата • SUP • Гольф • ТехноФан • Мастер-классы • Настольный теннис • Гидроциклы</div>
             </div>
-            <div class="flex gap-5 items-start">
-                <div class="font-bold text-sky-800 w-28 shrink-0">15:00</div>
-                <div>Welcome Drinks</div>
+            <div class="flex gap-6">
+                <div class="text-slate-900 font-semibold w-28 shrink-0">15:00</div>
+                <div class="text-slate-600">Welcome Drinks</div>
             </div>
         </div>
 
-        <div class="red-accent px-6 py-4 flex items-center gap-3">
-            <span class="text-xl">🌙</span>
-            <h2 class="text-white font-bold text-lg">Вечерняя программа</h2>
+        <div class="section-line mb-4"></div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-6">Вечерняя программа</h2>
+
+        <div class="space-y-5 text-sm">
+            <div class="flex gap-6">
+                <div class="text-slate-900 font-semibold w-28 shrink-0">16:30</div>
+                <div class="text-slate-600">Официальное открытие</div>
+            </div>
+            <div class="flex gap-6">
+                <div class="text-slate-900 font-semibold w-28 shrink-0">18:00–20:50</div>
+                <div class="text-slate-600">Вечерняя программа и кавер-группа</div>
+            </div>
+            <div class="flex gap-6">
+                <div class="text-slate-900 font-semibold w-28 shrink-0">20:00</div>
+                <div class="text-slate-600">Итоговый фильм</div>
+            </div>
+            <div class="flex gap-6">
+                <div class="text-slate-900 font-semibold w-28 shrink-0">20:50</div>
+                <div class="text-slate-600">Завершение</div>
+            </div>
         </div>
-        <div class="p-6 space-y-4 text-sm">
-            <div class="flex gap-5 items-start">
-                <div class="font-bold text-sky-800 w-28 shrink-0">16:30</div>
-                <div>Официальное открытие</div>
-            </div>
-            <div class="flex gap-5 items-start">
-                <div class="font-bold text-sky-800 w-28 shrink-0">18:00–20:50</div>
-                <div>Вечерняя программа и кавер-группа</div>
-            </div>
-            <div class="flex gap-5 items-start">
-                <div class="font-bold text-sky-800 w-28 shrink-0">20:00</div>
-                <div>Итоговый фильм</div>
-            </div>
-            <div class="flex gap-5 items-start">
-                <div class="font-bold text-sky-800 w-28 shrink-0">20:50</div>
-                <div>Завершение</div>
-            </div>
-        </div>
-    </div>
+    </section>
 
     <!-- Контакты -->
-    <div class="card rounded-3xl overflow-hidden shadow-xl">
-        <div class="red-accent px-6 py-4 flex items-center gap-3">
-            <span class="text-xl">📞</span>
-            <h2 class="text-white font-bold text-lg">Контакты</h2>
-        </div>
-        <div class="p-6">
-            <a href="tel:+79854916730" class="flex items-center justify-between bg-zinc-50 hover:bg-sky-50 rounded-2xl p-5 transition">
-                <div>
-                    <div class="font-bold text-lg">Герман</div>
-                    <div class="text-zinc-500 text-sm">По всем вопросам</div>
-                </div>
-                <div class="text-sky-700 font-bold text-lg">
-                    +7 985 491-67-30
-                </div>
-            </a>
-        </div>
-    </div>
+    <section class="reveal pb-8">
+        <div class="section-line mb-4"></div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-6">Контакты</h2>
 
-</div>
+        <a href="tel:+79854916730" class="block group">
+            <p class="text-slate-900 font-semibold text-lg group-hover:text-slate-700">Герман</p>
+            <p class="text-slate-400 text-sm mb-1">По всем вопросам</p>
+            <p class="text-sky-600 text-lg font-semibold">+7 985 491-67-30</p>
+        </a>
+    </section>
+
+</main>
+
+<script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.12 });
+
+    reveals.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
