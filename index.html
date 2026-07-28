@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>День железнодорожника • Транспортные Технологии</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(180deg, #0c4a6e 0%, #075985 45%, #0e7490 100%);
+            min-height: 100vh;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+        }
+        .red-block {
+            background: linear-gradient(90deg, #dc2626, #b91c1c);
+        }
+    </style>
+</head>
+<body class="text-zinc-800">
+
+<!-- Hero -->
+<div class="max-w-3xl mx-auto px-6 pt-12 pb-8 text-center">
+    <div class="inline-block px-5 py-1.5 rounded-full bg-white/20 text-white text-sm font-medium mb-5 tracking-widest">
+        ТРАНСПОРТНЫЕ ТЕХНОЛОГИИ
+    </div>
+    <h1 class="text-4xl md:text-5xl font-black text-white leading-tight mb-2">
+        ДЕНЬ<br>ЖЕЛЕЗНОДОРОЖНИКА
+    </h1>
+    <div class="text-3xl font-bold text-red-400 mb-6">31 августа</div>
+    <div class="w-20 h-1 bg-white/40 mx-auto rounded-full"></div>
+</div>
+
+<div class="max-w-3xl mx-auto px-5 pb-16 space-y-6">
+
+    <!-- Точка сбора -->
+    <div class="card rounded-3xl overflow-hidden shadow-xl">
+        <div class="red-block px-6 py-4">
+            <h2 class="text-white font-bold text-lg">📍 Точка сбора (трансфер)</h2>
+        </div>
+        <div class="p-6 space-y-4">
+            <div class="grid grid-cols-3 gap-3 text-center">
+                <div class="bg-sky-50 rounded-2xl p-3">
+                    <div class="text-xs text-sky-600 font-medium">Сбор</div>
+                    <div class="text-xl font-bold text-sky-900">8:40</div>
+                </div>
+                <div class="bg-sky-50 rounded-2xl p-3">
+                    <div class="text-xs text-sky-600 font-medium">Посадка</div>
+                    <div class="text-xl font-bold text-sky-900">9:00</div>
+                </div>
+                <div class="bg-sky-50 rounded-2xl p-3">
+                    <div class="text-xs text-sky-600 font-medium">Выезд</div>
+                    <div class="text-xl font-bold text-sky-900">9:20</div>
+                </div>
+            </div>
+            <div class="bg-zinc-50 rounded-2xl p-4 text-sm">
+                <p class="font-semibold mb-1">м. Медведково, выход 1</p>
+                <p class="text-zinc-600">Вас встретит сопровождающий и группами проводит на парковку к месту посадки.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3">
+                <a href="https://yandex.ru/maps?whatshere%5Bzoom%5D=19&whatshere%5Bpoint%5D=37.661616,55.887888&si=ymxuc28bfxzn2gz1xntxzzdtd0" target="_blank"
+                   class="flex-1 text-center py-3.5 rounded-2xl bg-sky-600 text-white font-semibold hover:bg-sky-700 transition">
+                    Точка у метро →
+                </a>
+                <a href="https://yandex.ru/maps?whatshere%5Bzoom%5D=19&whatshere%5Bpoint%5D=37.661749,55.891109&si=ymxuc28bfxzn2gz1xntxzzdtd0" target="_blank"
+                   class="flex-1 text-center py-3.5 rounded-2xl bg-white border-2 border-sky-600 text-sky-700 font-semibold hover:bg-sky-50 transition">
+                    Место посадки →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Как добраться самостоятельно -->
+    <div class="card rounded-3xl overflow-hidden shadow-xl">
+        <div class="red-block px-6 py-4">
+            <h2 class="text-white font-bold text-lg">🚗 Как добраться самостоятельно</h2>
+        </div>
+        <div class="p-6 space-y-4 text-sm">
+            <div class="bg-zinc-50 rounded-2xl p-4">
+                <p class="font-semibold mb-1">Курорт ПИРогово • Яхт-клуб</p>
+                <p class="text-zinc-600 leading-relaxed">
+                    141015, Московская область, городской округ Мытищи,<br>
+                    территория Туристический пансионат Клязьминское водохранилище, строение 3А
+                </p>
+                <p class="text-red-600 font-medium mt-2">Ограничение скорости на территории — 20 км/ч</p>
+            </div>
+
+            <!-- Схема проезда -->
+            <div class="rounded-2xl overflow-hidden border border-zinc-200">
+                <img src="schema1.jpg" alt="Схема проезда к яхт-клубу" class="w-full h-auto">
+            </div>
+
+            <div class="space-y-3">
+                <div class="flex gap-3 items-start">
+                    <div class="w-7 h-7 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold shrink-0">1</div>
+                    <div>Наберите в Яндекс.Картах <b>«ЯХТ»</b><br>
+                        <span class="text-zinc-500">Координаты парковки: 55.990221, 37.674700</span>
+                    </div>
+                </div>
+                <div class="flex gap-3 items-start">
+                    <div class="w-7 h-7 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold shrink-0">2</div>
+                    <div>Для проезда на территорию — следуйте через пост охраны</div>
+                </div>
+                <div class="flex gap-3 items-start">
+                    <div class="w-7 h-7 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold shrink-0">3</div>
+                    <div>Продолжайте движение на охраняемую парковку (220 метров)</div>
+                </div>
+                <div class="flex gap-3 items-start">
+                    <div class="w-7 h-7 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold shrink-0">4</div>
+                    <div>Оставьте автомобиль на парковке и следуйте в яхт-клуб<br>
+                        <span class="text-zinc-500">(на территории будут указатели «ЯХТ-КЛУБ»)</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://yandex.ru/maps/1/moscow-and-moscow-oblast/?ll=37.673547%2C55.986707&mode=routes&rtext=~55.986617%2C37.673642&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D167026777465&z=17" 
+               target="_blank"
+               class="block w-full text-center py-4 rounded-2xl bg-sky-600 text-white font-semibold hover:bg-sky-700 transition">
+                Открыть маршрут в Яндекс.Картах →
+            </a>
+        </div>
+    </div>
+
+    <!-- Дресс-код Гольф -->
+    <div class="card rounded-3xl overflow-hidden shadow-xl">
+        <div class="red-block px-6 py-4">
+            <h2 class="text-white font-bold text-lg">🏌️ Как одеться на гольф</h2>
+        </div>
+        <div class="p-6 text-sm space-y-4">
+            
+            <!-- Фото одежды -->
+            <div class="rounded-2xl overflow-hidden border border-zinc-200">
+                <img src="golf-odezhda.jpg" alt="Дресс-код на гольф" class="w-full h-auto">
+            </div>
+
+            <div>
+                <p class="font-semibold text-green-700 mb-1">Предпочтительная одежда:</p>
+                <ul class="list-disc pl-5 space-y-1 text-zinc-700">
+                    <li>Поло с воротником и пуговицами (заправляется в брюки/шорты)</li>
+                    <li>Брюки или гольф-шорты (длина чуть выше колена)</li>
+                    <li>Бейсболка или кепка — козырьком вперёд</li>
+                    <li>Гольф-туфли с шипами или удобная спортивная обувь</li>
+                </ul>
+            </div>
+            <div>
+                <p class="font-semibold text-red-600 mb-1">Не допускается:</p>
+                <ul class="list-disc pl-5 space-y-1 text-zinc-700">
+                    <li>Футболки, открытые майки</li>
+                    <li>Джинсы, тренировочные штаны, велосипедки, лосины</li>
+                    <li>Сандалии и любая открытая обувь</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Дресс-код Яхтинг -->
+    <div class="card rounded-3xl overflow-hidden shadow-xl">
+        <div class="red-block px-6 py-4">
+            <h2 class="text-white font-bold text-lg">⛵ Как одеться на яхтинг</h2>
+        </div>
+        <div class="p-6 text-sm space-y-4">
+            <p>Специальная яхтенная одежда не требуется.</p>
+            <div>
+                <p class="font-semibold text-green-700 mb-1">Рекомендуем:</p>
+                <ul class="list-disc pl-5 space-y-1 text-zinc-700">
+                    <li>Футболка / водолазка</li>
+                    <li>Шорты / спортивные брюки</li>
+                    <li>Спортивная куртка / ветровка</li>
+                    <li>Бейсболка</li>
+                    <li>Солнцезащитные очки в пластмассовой оправе</li>
+                    <li>Средство защиты от солнца</li>
+                    <li>Кроссовки / кеды на светлой подошве</li>
+                </ul>
+            </div>
+            <div class="bg-red-50 rounded-2xl p-4 text-red-800">
+                <p class="font-semibold mb-1">На воду запрещено брать:</p>
+                <p>часы, украшения, телефоны, стеклянную посуду, алкоголь.<br>
+                Ценные вещи можно оставить на хранение у менеджера в яхт-клубе.</p>
+            </div>
+            <p class="text-zinc-500">На месте можно сменить одежду в раздевалках.</p>
+        </div>
+    </div>
+
+    <!-- Тайминг -->
+    <div class="card rounded-3xl overflow-hidden shadow-xl">
+        <div class="red-block px-6 py-4">
+            <h2 class="text-white font-bold text-lg">☀️ Дневная программа</h2>
+        </div>
+        <div class="p-6 space-y-3 text-sm">
+            <div class="flex gap-4"><div class="font-bold text-sky-800 w-28 shrink-0">10:00</div><div>Welcome Breakfast</div></div>
+            <div class="flex gap-4"><div class="font-bold text-sky-800 w-28 shrink-0">11:00–16:00</div><div>Регата • SUP • Гольф • ТехноФан • Мастер-классы • Настольный теннис • Гидроциклы</div></div>
+            <div class="flex gap-4"><div class="font-bold text-sky-800 w-28 shrink-0">15:00</div><div>Welcome Drinks</div></div>
+        </div>
+
+        <div class="red-block px-6 py-4">
+            <h2 class="text-white font-bold text-lg">🌙 Вечерняя программа</h2>
+        </div>
+        <div class="p-6 space-y-3 text-sm">
+            <div class="flex gap-4"><div class="font-bold text-sky-800 w-28 shrink-0">16:30</div><div>Официальное открытие</div></div>
+            <div class="flex gap-4"><div class="font-bold text-sky-800 w-28 shrink-0">18:00–20:50</div><div>Вечерняя программа и кавер-группа</div></div>
+            <div class="flex gap-4"><div class="font-bold text-sky-800 w-28 shrink-0">20:00</div><div>Итоговый фильм</div></div>
+            <div class="flex gap-4"><div class="font-bold text-sky-800 w-28 shrink-0">20:50</div><div>Завершение</div></div>
+        </div>
+    </div>
+
+    <!-- Контакты -->
+    <div class="card rounded-3xl overflow-hidden shadow-xl">
+        <div class="red-block px-6 py-4">
+            <h2 class="text-white font-bold text-lg">📞 Контакты</h2>
+        </div>
+        <div class="p-6">
+            <div class="flex items-center justify-between bg-zinc-50 rounded-2xl p-5">
+                <div>
+                    <div class="font-bold text-lg">Герман</div>
+                    <div class="text-zinc-500 text-sm">По всем вопросам</div>
+                </div>
+                <a href="tel:+79854916730" class="text-sky-700 font-bold text-lg hover:underline">
+                    +7 985 491-67-30
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center text-white/80 text-sm pt-2 pb-10">
+        Ведущие: Стас Зубков и Митя Горький
+    </div>
+
+</div>
+
+</body>
+</html>
